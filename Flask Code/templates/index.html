@@ -105,7 +105,7 @@ body {
     width: 100%;
   }
 }
-<!-- BELOW THIS IS THE TEXT  BOXES -->
+<!-- BELOW THIS IS THE TEXT  BOXES-->
 input[type=text], select {
   width: 100%;
   padding: 12px 20px;
@@ -117,7 +117,7 @@ input[type=text], select {
 }
 
 input[type=submit] {
-  width: 100%;
+  width: 50%;
   background-color: #4CAF50;
   color: white;
   padding: 14px 20px;
@@ -177,24 +177,18 @@ div {
 </div>
 <!-- BELOW THIS IS THE TEXT  BOXES -->
 <div>
-  <form action="/action_page.php">
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-
-    <label for="country">Country</label>
-    <select id="country" name="country">
-      <option value="australia">Australia</option>
-      <option value="canada">Canada</option>
-      <option value="usa">USA</option>
-    </select>
   
-    <input type="submit" value="Submit">
+    <input type="submit" value="Create Account">
+    <input type="submit" id = "login_page" value="Login">
   </form>
 </div>
 
+<script>
+    alert("hey");
+    document.getElementById("login_page").addEventListener('click', function(){
+        window.document.location = "./login.html";
+    })
+</script>
 
 </body>
 </html>
@@ -215,7 +209,6 @@ div {
 			<div class="column">
 				<img src="static\Tanbar.png" width="100%;">
 			</div>
-
 			<div class="column">
 				<img src="static\Blackbar.png" width="20%;">
 				<img src="static\Graybar.png" width="75%;" height="145%;">
