@@ -153,72 +153,74 @@ div {
   <div class="leftcolumn">
     <div class="card">
       <h2>Health Sections</h2>
-      <h5>Title description, Dec 7, 2017</h5>
+      <h5>Useful articles along with their links and dates created</h5>
      
 		<div class="topnav">
-		<a href="#">Link</a>
-		<a href="#" style="float: bottom" >Link</a>
-		<a href="#">Link</a>
+		<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1570512/">Health Article 1</a>
+		<a href="https://www.healthline.com/nutrition/15-ways-to-lower-blood-sugar" style="float: bottom" >Health Link  2</a>
+		<a href="https://www.healthline.com/health/blood-sugar-spike#:~:text=When%20glucose%20builds%20up%20in,unable%20to%20use%20insulin%20effectively.">Health Link 3</a>
 		<p> <p>
 		</div>
 		
       <p>Some text..</p>
-      <p>SAMPLE TEXTERINO</p>
-	  <p>SAMPLE TEXTERINO</p>
+      <p>SAMPLE TEXT</p>
+	  <p>SAMPLE TEXT ON HEALTH TIPS</p>
     </div>
   </div>
   <div class="rightcolumn">
     <div class="card">
-      <h2>About Me</h2>
-      <div class="fakeimg" style="height:300px;">Imageer</div>
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+      <h2>About Us</h2>
+      <div class="fakeimg" style="height:300px;">Insert Team Image Later</div>
+      <p>Some text about our team and what we hope to accomplish. Our goals and aspirations</p>
     </div>
   </div>
 </div>
 <!-- BELOW THIS IS THE TEXT  BOXES -->
 <div>
   
-    <input type="submit" value="Create Account">
+    <input type="submit" id = "signup_page" value="Create Account">
     <input type="submit" id = "login_page" value="Login">
   </form>
 </div>
 
-<script>
-    alert("hey");
+
+  <script>
+    <!--alert("hey");-->	
     document.getElementById("login_page").addEventListener('click', function(){
         window.document.location = "./login.html";
     })
 </script>
 
+  <script>
+    <!--alert("hey");-->	
+    document.getElementById("signup_page").addEventListener('click', function(){
+        window.document.location = "./signup.html";
+    })
+</script>
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+		apiKey: "AIzaSyBmCo2VqSfOuIkdk8LrHM3VroLasHK5JpY",
+		authDomain: "health-monitoring-438d4.firebaseapp.com",
+		databaseURL: "https://health-monitoring-438d4.firebaseio.com",
+		projectId: "health-monitoring-438d4",
+		storageBucket: "health-monitoring-438d4.appspot.com",
+		messagingSenderId: "665249190955",
+    };
+    firebase.initializeApp(config);
+	
+    // make auth and firestore references
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+    // update firestore settings
+    db.settings({ timestampsInSnapshots: true });
+  </script>
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="scripts/auth.js"></script>
+  <script src="scripts/index.js"></script>
 </body>
 </html>
-
-
-<!--
-<! Doctype html>
-<html>
-	<head>
-		<title>Health Monitoring Application</title>
-		<link rel="stylesheet" href="/static/style.css" />
-	<head>
-	<body>
-		<h1>This website was built for health monitoring purposes</h1>
-		
-		
-		<div class="row">
-			<div class="column">
-				<img src="static\Tanbar.png" width="100%;">
-			</div>
-			<div class="column">
-				<img src="static\Blackbar.png" width="20%;">
-				<img src="static\Graybar.png" width="75%;" height="145%;">
-			</div>
-			
-		
-			
-			</div>
-			
-		</div>
-	<body>
-</html>
--->	
