@@ -26,8 +26,17 @@ body {
 /* Style the top navigation bar */
 .topnav {
   overflow: hidden;
-  height: 100%;
-  background-color: #333;
+  height: 10%;
+  background-color: rgb(85, 175, 202);
+}
+
+/*  Images that send you to article links */
+.leftcolumnImageLink {
+  width: 150px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: 6px;
+  border-color: rgb(85, 175, 202);
 }
 
 /* Style the topnav links */
@@ -50,7 +59,7 @@ body {
 /* Left column */
 .leftcolumn {   
   float: left;
-  width: 25%;
+  width: 15%;
 }
 
 /* Right column */
@@ -133,7 +142,7 @@ input[type=submit]:hover {
 
 div {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: #f2f2f2; /* 2nd to lower background */
   padding: 20px;
 }
 </style>
@@ -150,27 +159,51 @@ div {
 </div>
 
 <div class="row">
-  <div class="leftcolumn">
+  <div class="leftcolumn" style="width: 270px">
     <div class="card">
-      <h2>Health Sections</h2>
-      <h5>Useful articles along with their links and dates created</h5>
-     
-		<div class="topnav">
-		<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1570512/">Health Article 1</a>
-		<a href="https://www.healthline.com/nutrition/15-ways-to-lower-blood-sugar" style="float: bottom" >Health Link  2</a>
-		<a href="https://www.healthline.com/health/blood-sugar-spike#:~:text=When%20glucose%20builds%20up%20in,unable%20to%20use%20insulin%20effectively.">Health Link 3</a>
-		<p> <p>
-		</div>
-		
-      <p>Some text..</p>
-      <p>SAMPLE TEXT</p>
-	  <p>SAMPLE TEXT ON HEALTH TIPS</p>
+      <h2 style="text-align: center;margin-bottom: -15px;">Health Sections</h2>
+      <h5 style="font-size: 10pt;text-align: center;margin-bottom: 10px;">Tips for your everyday life</h5>
+      <div style="height: 300px; width: 200px; overflow-y: scroll;">
+      <!-- Link 1 -->
+        <a target="_blank" href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/prevention.html">
+          <img alt="Blood Levels" class="leftcolumnImageLink" src="https://www.kzoo.edu/praxis/files/2020/03/Screen-Shot-2020-03-31-at-2.39.55-PM.png">
+        </a>
+        <p style="font-size: 8pt;text-align: center;margin-top: -3px;">Protect Yourself from <br>COVID-19
+        </p>
+      <!-- Link 2 -->
+        <a target="_blank" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1570512/">
+          <img alt="Blood Levels" class="leftcolumnImageLink" src="https://cnet3.cbsistatic.com/img/01ZEIuuXPi1h_-x0bSr1IeFXObw=/1200x630/2020/03/29/74a8ea87-ad93-40a7-9544-f9de29f25424/gettyimages-916358758.jpg">
+        </a>
+        <p style="font-size: 8pt;text-align: center;margin-top: -3px;">Estimating Blood Glucose Levels for Diabetics
+        </p>
+      <!-- Link 3 -->
+        <a target="_blank" href="https://www.healthline.com/nutrition/15-ways-to-lower-blood-sugar">
+          <img alt="Joggers" class="leftcolumnImageLink" src="https://i0.wp.com/rakuten.today/wp-content/uploads/2018/10/GettyImages-508299088.jpg?fit=1500%2C1000&ssl=1">
+        </a>  
+        <p style="font-size: 8pt;text-align: center;margin-top: -3px;">15 Ways to <br>Lower Blood Sugar
+        </p>
+      <!-- Link 4 -->
+        <a target="_blank" href="https://www.healthline.com/health/blood-sugar-spike#:~:text=When%20glucose%20builds%20up%20in,unable%20to%20use%20insulin%20effectively." >
+          <img alt="Joggers" class="leftcolumnImageLink" src="https://miro.medium.com/max/4242/1*Om3m6TkNp8-ys9KLHozFsg.jpeg">
+        </a>  
+        <p style="font-size: 8pt;text-align: center;margin-top: -3px;">Recognize and Manage a Blood Sugar Spike
+        </p>
+      <!-- Link 5 -->
+        <a target="_blank" href="http://sleepeducation.org/essentials-in-sleep/healthy-sleep-habits" >
+          <img alt="Joggers" class="leftcolumnImageLink" src="https://1v1d1e1lmiki1lgcvx32p49h8fe-wpengine.netdna-ssl.com/wp-content/uploads/2016/03/woman-man-sleeping-getty.jpg">
+        </a>  
+        <p style="font-size: 8pt;text-align: center;margin-top: -3px;">Healthy Sleep Habits
+        </p>
+      </div>
+      <!-- Date of Update -->
+      <p style="font-style: italic;font-size: 8pt;text-align: left;color:rgb(48, 48, 48)">Updated: 11/11/2020</p>
     </div>
+
   </div>
   <div class="rightcolumn">
     <div class="card">
       <h2>About Us</h2>
-      <div class="fakeimg" style="height:300px;">Insert Team Image Later</div>
+      <div class="fakeimg" style="height:300px;">Test 123</div>
       <p>Some text about our team and what we hope to accomplish. Our goals and aspirations</p>
     </div>
   </div>
